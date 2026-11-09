@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# build artifacts
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.synctex.gz
+
+# OS
+.DS_Store
+Thumbs.db
+
+# heavy media (video/wav are deliverables, not code)
+video/*.mp4
+video/*.wav
+video/frames/
+video/txt/
