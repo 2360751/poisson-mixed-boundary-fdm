@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering\small
+\caption{Robin data ($\beta=2$), ghost-point closure: order $\approx 2$; the Robin term slightly reduces the error constant.}
+\label{tab:conv-ghost-robin}
+\begin{tabular}{rccccccc}
+\toprule
+$N$ & $h$ & $\lVert e\rVert_{h\ell^2}$ & $p_{h\ell^2}$ & $\lVert e\rVert_{\infty}$ & $p_{\infty}$ & $\lVert e\rVert_{\infty,\partial}$ & $\lVert e\rVert_{\infty,\mathrm{int}}$ \\
+\midrule
+16 & $0.0625$ & $1.467e-04$ & -- & $5.307e-04$ & -- & $5.307e-04$ & $3.928e-04$ \\
+32 & $0.0312$ & $3.419e-05$ & 2.101 & $1.332e-04$ & 1.994 & $1.332e-04$ & $1.149e-04$ \\
+64 & $0.0156$ & $8.221e-06$ & 2.056 & $3.335e-05$ & 1.998 & $3.335e-05$ & $3.098e-05$ \\
+128 & $0.0078$ & $2.014e-06$ & 2.029 & $8.340e-06$ & 2.000 & $8.340e-06$ & $8.039e-06$ \\
+256 & $0.0039$ & $4.982e-07$ & 2.015 & $2.085e-06$ & 2.000 & $2.085e-06$ & $2.047e-06$ \\
+\midrule
+\multicolumn{2}{l}{\textbf{fitted}} & \textbf{2.049} & & \textbf{1.998} & & \textbf{1.998} & \textbf{1.900} \\
+\bottomrule
+\end{tabular}
+\end{table}

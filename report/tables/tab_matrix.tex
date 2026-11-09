@@ -1,0 +1,19 @@
+\begin{table}[H]
+\centering\small
+\caption{Matrix structure and conditioning (exp\_04).  Asymmetry $\lVert A-A^T\rVert_1/\lVert A\rVert_1$; condition estimates from repeated sparse solves.  The mixed assemblies are nonsymmetric (no CG); the one-sided rows worsen conditioning by $\sim4\times$; the pure-Neumann matrix is singular (constants in the kernel).}
+\label{tab:matrix}
+\begin{tabular}{lrrrr}
+\toprule
+assembly & $N$ & asymmetry & $\hat\kappa_1$ & $\max|\text{row sums}|$ \\
+\midrule
+neumann ghost & 32 & $7.91e-03$ & $7.48e+02$ & $2.0e+03$ \\
+neumann ghost & 128 & $1.96e-03$ & $1.20e+04$ & $3.3e+04$ \\
+neumann onesided & 32 & $7.91e-03$ & $3.14e+03$ & $2.0e+03$ \\
+neumann onesided & 128 & $1.96e-03$ & $4.89e+04$ & $3.3e+04$ \\
+robin ghost & 32 & $7.90e-03$ & $6.10e+02$ & $2.0e+03$ \\
+robin ghost & 128 & $1.96e-03$ & $9.76e+03$ & $3.3e+04$ \\
+pure neumann ghost & 32 & $3.03e-02$ & $9.24e+16$ & $0.0e+00$ \\
+pure neumann ghost & 128 & $7.75e-03$ & $4.00e+17$ & $0.0e+00$ \\
+\bottomrule
+\end{tabular}
+\end{table}

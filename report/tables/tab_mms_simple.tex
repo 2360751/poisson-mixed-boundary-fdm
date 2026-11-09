@@ -1,0 +1,16 @@
+\begin{table}[H]
+\centering
+\begin{tabular}{cccc}
+\toprule
+\textbf{Mesh spacing $h$} & \textbf{Error} & \textbf{Ratio} & \textbf{Order} \\
+\midrule
+$0.0625$ & $2.498e-04$ & --- & --- \\
+$0.0312$ & $5.882e-05$ & 4.25 & 2.09 \\
+$0.0156$ & $1.423e-05$ & 4.13 & 2.05 \\
+$0.0078$ & $3.495e-06$ & 4.07 & 2.03 \\
+$0.0039$ & $8.661e-07$ & 4.04 & 2.01 \\
+\bottomrule
+\end{tabular}
+\caption{Convergence study for the manufactured solution $u_*$ in the discrete $L^2$ norm (ghost-point closure, Neumann data).  Ratio and order are pairwise; the fitted order over all meshes is 2.042.}
+\label{tab:mms-simple}
+\end{table}

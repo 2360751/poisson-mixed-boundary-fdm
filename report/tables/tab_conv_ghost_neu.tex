@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering\small
+\caption{Neumann data, ghost-point closure: four-mesh (plus confirmation) refinement in the discrete $L^2$ and nodal $L^\infty$ norms; $p$ are pairwise observed orders.  Both norms converge at order $\approx 2$; the boundary $L^\infty$ error carries the maximum.}
+\label{tab:conv-ghost-neu}
+\begin{tabular}{rccccccc}
+\toprule
+$N$ & $h$ & $\lVert e\rVert_{h\ell^2}$ & $p_{h\ell^2}$ & $\lVert e\rVert_{\infty}$ & $p_{\infty}$ & $\lVert e\rVert_{\infty,\partial}$ & $\lVert e\rVert_{\infty,\mathrm{int}}$ \\
+\midrule
+16 & $0.0625$ & $2.498e-04$ & -- & $8.611e-04$ & -- & $8.611e-04$ & $6.706e-04$ \\
+32 & $0.0312$ & $5.882e-05$ & 2.086 & $2.163e-04$ & 1.993 & $2.163e-04$ & $1.914e-04$ \\
+64 & $0.0156$ & $1.423e-05$ & 2.048 & $5.412e-05$ & 1.998 & $5.412e-05$ & $5.096e-05$ \\
+128 & $0.0078$ & $3.495e-06$ & 2.025 & $1.354e-05$ & 1.999 & $1.354e-05$ & $1.314e-05$ \\
+256 & $0.0039$ & $8.661e-07$ & 2.013 & $3.385e-06$ & 2.000 & $3.385e-06$ & $3.334e-06$ \\
+\midrule
+\multicolumn{2}{l}{\textbf{fitted}} & \textbf{2.042} & & \textbf{1.998} & & \textbf{1.998} & \textbf{1.917} \\
+\bottomrule
+\end{tabular}
+\end{table}

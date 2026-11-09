@@ -1,0 +1,35 @@
+\begin{table}[H]
+\centering\small
+\caption{Pure-Neumann depth variant: convergence after the pinned gauge and the least-squares constant shift.  Fitted orders: $L^2$ 2.048, $L^\infty$ 1.839.}
+\label{tab:pure-neumann}
+\begin{tabular}{rccc}
+\toprule
+$N$ & $h$ & $\lVert e+\bar c\rVert_{h\ell^2}$ & $\lVert e+\bar c\rVert_{\infty}$ \\
+\midrule
+16 & $0.0625$ & $1.452e-03$ & $6.025e-03$ \\
+32 & $0.0312$ & $3.381e-04$ & $1.718e-03$ \\
+64 & $0.0156$ & $8.144e-05$ & $4.826e-04$ \\
+128 & $0.0078$ & $1.998e-05$ & $1.339e-04$ \\
+256 & $0.0039$ & $4.947e-06$ & $3.679e-05$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering\small
+\caption{Pure-Neumann structure at $N=32$ ($n=1089$): right null vector, left null vector, compatibility defect, and the incompatible-RHS falsification.}
+\label{tab:pure-struct}
+\begin{tabular}{lr}
+\toprule
+quantity & value \\
+\midrule
+$\lVert A\mathbf{1}\rVert_\infty$ & $0.0e+00$ \\
+$\lVert A^T w\rVert_\infty$ (smallest left singular vector) & $2.6e-12$ \\
+compatibility $|\langle b,w\rangle|/(\lVert b\rVert\lVert w\rVert)$ & $5.8e-06$ \\
+pinned-row defect $\lVert Au-b\rVert_\infty$ (compatible $b$) & $1.968$ \\
+pinned-row defect (falsified: $b+1$) & $4094.0$ \\
+$\lVert e\rVert_\infty$ before constant shift & $1.0026$ \\
+$\lVert e+\bar c\rVert_\infty$ after shift & $1.718e-03$ \\
+\bottomrule
+\end{tabular}
+\end{table}

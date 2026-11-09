@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering\small
+\caption{Neumann data, first-order one-sided closure: global order $\approx 1$ in both norms, as predicted for the derivative row that replaces the PDE row.}
+\label{tab:conv-onesided-neu}
+\begin{tabular}{rccccccc}
+\toprule
+$N$ & $h$ & $\lVert e\rVert_{h\ell^2}$ & $p_{h\ell^2}$ & $\lVert e\rVert_{\infty}$ & $p_{\infty}$ & $\lVert e\rVert_{\infty,\partial}$ & $\lVert e\rVert_{\infty,\mathrm{int}}$ \\
+\midrule
+16 & $0.0625$ & $1.958e-02$ & -- & $5.832e-02$ & -- & $5.832e-02$ & $4.863e-02$ \\
+32 & $0.0312$ & $8.939e-03$ & 1.131 & $2.815e-02$ & 1.051 & $2.815e-02$ & $2.574e-02$ \\
+64 & $0.0156$ & $4.266e-03$ & 1.067 & $1.383e-02$ & 1.025 & $1.383e-02$ & $1.322e-02$ \\
+128 & $0.0078$ & $2.084e-03$ & 1.034 & $6.853e-03$ & 1.013 & $6.853e-03$ & $6.701e-03$ \\
+256 & $0.0039$ & $1.030e-03$ & 1.017 & $3.411e-03$ & 1.007 & $3.411e-03$ & $3.373e-03$ \\
+\midrule
+\multicolumn{2}{l}{\textbf{fitted}} & \textbf{1.060} & & \textbf{1.023} & & \textbf{1.023} & \textbf{0.964} \\
+\bottomrule
+\end{tabular}
+\end{table}

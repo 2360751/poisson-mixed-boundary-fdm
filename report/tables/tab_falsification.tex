@@ -1,0 +1,15 @@
+\begin{table}[H]
+\centering\small
+\caption{Falsification attempts (exp\_07): one deliberate defect per run, each destroying the second-order table of the baseline ghost closure.  The refinement study can therefore distinguish a correct implementation from a plausible-looking wrong one.}
+\label{tab:falsification}
+\begin{tabular}{lccc}
+\toprule
+run & fitted $p_{h\ell^2}$ & fitted $p_\infty$ & $\lVert e\rVert_\infty$ at $N=128$ \\
+\midrule
+baseline (correct ghost) & 2.052 & 1.997 & $1.354e-05$ \\
+F1: sign of $q$ flipped & 0.038 & -0.002 & $3.477e+00$ \\
+F2: west coupling not doubled & -0.076 & -0.175 & $6.321e+00$ \\
+F3: top-edge Dirichlet move dropped & 0.040 & 0.000 & $7.389e+00$ \\
+\bottomrule
+\end{tabular}
+\end{table}

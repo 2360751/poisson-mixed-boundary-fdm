@@ -1,0 +1,15 @@
+\begin{table}[H]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{Pointwise row defects obtained by substituting sampled $u^*$ into each row formula (exp\_01, measured at $h=1/64$).  Constants are compared with the Taylor predictions at $y=0.5$: one-sided $-(h/2)u^*_{xx}$, ghost row $(h/3)u^*_{xxx}$, centred BC $(h^2/6)u^*_{xxx}$, interior $-h^2(u^*_{xxxx}+u^*_{yyyy})/12$.}
+\label{tab:rowdefects}
+\begin{tabular}{lcccc}
+\toprule
+row & predicted leading term & fitted order & $\text{defect}/h^{p}$ & predicted constant \\
+\midrule
+interior five-point row & $-u^*/6$ (with $p=2$) & 2.000 & 0.4531 & -0.4530 \\
+one-sided boundary row (Neumann) & $-u^*/2$ (with $p=1$) & 0.995 & 2.2292 & -2.2408 \\
+ghost-eliminated PDE row (Neumann) & $u^*/3$ (with $p=1$) & 0.992 & 1.4822 & 1.4939 \\
+centred BC condition & $u^*/6$ (with $p=2$) & 2.000 & 0.7470 & 0.7469 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,16 @@
+\begin{table}[H]
+\centering\small
+\caption{Direct vs.\ iterative at matched algebraic accuracy on the Neumann/ghost system at $N=64$ ($n=4033$ unknowns): every iterative run stops at relative residual $10^{-10}$; the cost measure is wall-clock solve time and iteration count (assembly, factorisation setup and plotting not counted). $\lVert u_{\mathrm{iter}}-u_{\mathrm{splu}}\rVert_{\infty}$ is the disagreement with the direct solve (the discrete oracle).}
+\label{tab:solvers}
+\begin{tabular}{lrrrr}
+\toprule
+solver & iterations & time [s] & rel. residual & $\lVert u-u_{\mathrm{splu}}\rVert_{\infty}$ \\
+\midrule
+splu & -- (1 factorisation) & 0.016 & $1.517e-15$ & $0.000e+00$ \\
+jacobi & 22388 & 1.979 & $9.999e-11$ & $2.528e-07$ \\
+gauss\_seidel & 11192 & 4.646 & $9.992e-11$ & $2.524e-07$ \\
+sor(1.5) & 3721 & 1.664 & $9.964e-11$ & $2.502e-07$ \\
+bicgstab+ILU & 39 & 0.089 & $8.621e-11$ & $6.879e-09$ \\
+\bottomrule
+\end{tabular}
+\end{table}

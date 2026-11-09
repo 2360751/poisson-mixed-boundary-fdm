@@ -1,0 +1,17 @@
+\begin{table}[H]
+\centering\small
+\begin{tabular}{crrrrr}
+\toprule
+tolerance & achieved rel.\ res. & iters & $\lVert e\rVert_\infty$ (disc.) & $\lVert u-u_{LU}\rVert_\infty$ & scaled res. \\
+\midrule
+$1e-02$ & $7.561e-03$ & 13 & $7.372e-01$ & $7.372e-01$ & $1.439e-02$ \\
+$1e-04$ & $1.105e-04$ & 21 & $8.261e-03$ & $8.262e-03$ & $2.102e-04$ \\
+$1e-06$ & $2.807e-06$ & 30 & $6.814e-05$ & $6.960e-05$ & $5.343e-06$ \\
+$1e-08$ & $2.986e-09$ & 35 & $5.412e-05$ & $1.246e-08$ & $5.682e-09$ \\
+$1e-10$ & $8.621e-11$ & 39 & $5.413e-05$ & $6.879e-09$ & $1.641e-10$ \\
+$1e-12$ & $9.219e-13$ & 43 & $5.412e-05$ & $9.220e-11$ & $1.754e-12$ \\
+\bottomrule
+\end{tabular}
+\caption{Tolerance sweep on one representative mesh ($N=64$, Neumann/ghost, exp\_08): the discretisation error stops changing for tolerance $\le 10^{-8}$ while the algebraic disagreement with the sparse-LU oracle keeps dropping.  At tolerance $10^{-6}$ the algebraic error pollutes the refinement fit (order 0.97 instead of 2.05); at $10^{-10}$ the fitted order is the discretisation order.  Scaled row residual defined in Eq.~\eqref{eq:scaledresid}.}
+\label{tab:tolsweep}
+\end{table}

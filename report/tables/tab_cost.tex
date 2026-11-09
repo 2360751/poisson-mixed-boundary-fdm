@@ -1,0 +1,31 @@
+\begin{table}[H]
+\centering\small
+\caption{Cost vs.\ accuracy for the two closures (Neumann variant).  Measured: error and wall time up to $N=512$. Extrapolated $N_{\mathrm{need}}$ from the fitted boundary order to reach $\lVert e\rVert_{\infty,\partial}\le\epsilon$. Cost measure: $N$ (grid size) and $\mathrm{nnz}(A)$; wall times are solve-only (assembly excluded).}
+\label{tab:cost}
+\begin{tabular}{lrrrr}
+\toprule
+closure & fitted $p_{\partial}$ & $N_{\mathrm{need}}$ ($10^{-3}$) & $N_{\mathrm{need}}$ ($10^{-4}$) & $N_{\mathrm{need}}$ ($10^{-5}$) \\
+\midrule
+ghost & 2.000 & 15 & 47 & 149 \\
+onesided & 1.005 & 869 & 8592 & 84960 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering\small
+\caption{Measured error and solve time of both closures at matched grids (Neumann).  At $N=512$ the ghost closure is $\sim2000\times$ more accurate at essentially the same cost -- the closure changes feasibility, not just efficiency.}
+\label{tab:cost-measured}
+\begin{tabular}{llrrr}
+\toprule
+closure & $N$ & $\lVert e\rVert_{\infty,\partial}$ & solve time [s] & $\mathrm{nnz}$ \\
+\midrule
+ghost & 128 & $1.354e-05$ & 0.082 & 80770 \\
+ghost & 256 & $3.385e-06$ & 0.504 & 325378 \\
+ghost & 512 & $8.461e-07$ & 3.632 & 1306114 \\
+onesided & 128 & $6.853e-03$ & 0.090 & 80518 \\
+onesided & 256 & $3.411e-03$ & 0.586 & 324870 \\
+onesided & 512 & $1.702e-03$ & 3.271 & 1305094 \\
+\bottomrule
+\end{tabular}
+\end{table}

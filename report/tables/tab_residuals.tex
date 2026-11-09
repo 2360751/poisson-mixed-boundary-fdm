@@ -1,0 +1,16 @@
+\begin{table}[H]
+\centering\small
+\caption{Scaled algebraic residual $\max_i |r_i|/\max_j|A_{ij}|$ of the sparse-direct solve, and nnz of $A$ (Neumann, ghost closure). The residual stays at round-off on every mesh, far below the discretisation error in Table~\ref{tab:conv-ghost-neu}.}
+\label{tab:residuals}
+\begin{tabular}{rcccc}
+\toprule
+$N$ & $h$ & scaled residual & $\lVert e\rVert_{\infty}$ & $\mathrm{nnz}(A)$ \\
+\midrule
+16 & $0.0625$ & $1.554e-15$ & $8.611e-04$ & 1138 \\
+32 & $0.0312$ & $1.998e-15$ & $2.163e-04$ & 4834 \\
+64 & $0.0156$ & $2.887e-15$ & $5.412e-05$ & 19906 \\
+128 & $0.0078$ & $3.997e-15$ & $1.354e-05$ & 80770 \\
+256 & $0.0039$ & $5.453e-15$ & $3.385e-06$ & 325378 \\
+\bottomrule
+\end{tabular}
+\end{table}
