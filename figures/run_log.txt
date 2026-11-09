@@ -1,0 +1,197 @@
+interior           order=2.000  1.770e-03 4.424e-04 1.106e-04 2.765e-05 6.913e-06 1.729e-06
+onesided_neumann   order=0.995  1.372e-01 6.930e-02 3.483e-02 1.746e-02 8.742e-03 4.374e-03
+ghost_neumann      order=0.992  9.047e-02 4.596e-02 2.316e-02 1.163e-02 5.824e-03 2.915e-03
+centred_bc_neumann order=2.000  2.918e-03 7.295e-04 1.824e-04 4.559e-05 1.140e-05 2.849e-06
+onesided_robin     order=0.995  1.372e-01 6.930e-02 3.483e-02 1.746e-02 8.742e-03 4.374e-03
+ghost_robin        order=0.992  9.047e-02 4.596e-02 2.316e-02 1.163e-02 5.824e-03 2.915e-03
+
+predicted constants at y=0.5 (e^1.5 = 4.4817):
+  onesided defect / h  -> -e/2 = -2.2408   measured -2.2292
+  ghost defect / h     ->  e/3 = 1.4939   measured 1.4822
+  centred defect / h^2 ->  e/6 = 0.7469   measured 0.7470
+  interior defect / h^2-> -e/6 = -0.7469   measured -0.4531
+
+saved to figures/results.json
+
+=== bc=neumann, closure=ghost ===
+  N=  16  L2=2.497643e-04  Linf=8.610566e-04  bnd=8.610566e-04  int=6.706214e-04  sres=1.55e-15
+  N=  32  L2=5.882385e-05  Linf=2.162542e-04  bnd=2.162542e-04  int=1.914256e-04  sres=2.00e-15
+  N=  64  L2=1.422699e-05  Linf=5.412455e-05  bnd=5.412455e-05  int=5.095824e-05  sres=2.89e-15
+  N= 128  L2=3.495482e-06  Linf=1.353709e-05  bnd=1.353709e-05  int=1.313524e-05  sres=4.00e-15
+  N= 256  L2=8.661355e-07  Linf=3.384514e-06  bnd=3.384514e-06  int=3.333990e-06  sres=5.45e-15
+  fitted L2        order = 2.042  (dev 1.86e-02)  pairwise -, 2.086, 2.048, 2.025, 2.013
+  fitted Linf      order = 1.998  (dev 1.73e-03)  pairwise -, 1.993, 1.998, 1.999, 2.000
+  fitted bnd_Linf  order = 1.998  (dev 1.73e-03)  pairwise -, 1.993, 1.998, 1.999, 2.000
+  fitted int_Linf  order = 1.917  (dev 4.39e-02)  pairwise -, 1.809, 1.909, 1.956, 1.978
+
+=== bc=neumann, closure=onesided ===
+  N=  16  L2=1.957837e-02  Linf=5.832014e-02  bnd=5.832014e-02  int=4.862798e-02  sres=6.15e-14
+  N=  32  L2=8.938523e-03  Linf=2.814921e-02  bnd=2.814921e-02  int=2.574439e-02  sres=2.17e-13
+  N=  64  L2=4.266327e-03  Linf=1.382994e-02  bnd=1.382994e-02  int=1.322279e-02  sres=5.95e-13
+  N= 128  L2=2.083733e-03  Linf=6.852892e-03  bnd=6.852892e-03  int=6.700779e-03  sres=2.42e-12
+  N= 256  L2=1.029674e-03  Linf=3.410918e-03  bnd=3.410918e-03  int=3.372922e-03  sres=4.21e-12
+  fitted L2        order = 1.060  (dev 2.93e-02)  pairwise -, 1.131, 1.067, 1.034, 1.017
+  fitted Linf      order = 1.023  (dev 1.14e-02)  pairwise -, 1.051, 1.025, 1.013, 1.007
+  fitted bnd_Linf  order = 1.023  (dev 1.14e-02)  pairwise -, 1.051, 1.025, 1.013, 1.007
+  fitted int_Linf  order = 0.964  (dev 1.88e-02)  pairwise -, 0.918, 0.961, 0.981, 0.990
+
+=== bc=robin, closure=ghost ===
+  N=  16  L2=1.466918e-04  Linf=5.307317e-04  bnd=5.307317e-04  int=3.928121e-04  sres=1.56e-15
+  N=  32  L2=3.418758e-05  Linf=1.331971e-04  bnd=1.331971e-04  int=1.148706e-04  sres=2.45e-15
+  N=  64  L2=8.220944e-06  Linf=3.335054e-05  bnd=3.335054e-05  int=3.098452e-05  sres=2.89e-15
+  N= 128  L2=2.013754e-06  Linf=8.339717e-06  bnd=8.339717e-06  int=8.039093e-06  sres=2.91e-15
+  N= 256  L2=4.982152e-07  Linf=2.085059e-06  bnd=2.085059e-06  int=2.047169e-06  sres=4.83e-15
+  fitted L2        order = 2.049  (dev 2.19e-02)  pairwise -, 2.101, 2.056, 2.029, 2.015
+  fitted Linf      order = 1.998  (dev 1.48e-03)  pairwise -, 1.994, 1.998, 2.000, 2.000
+  fitted bnd_Linf  order = 1.998  (dev 1.48e-03)  pairwise -, 1.994, 1.998, 2.000, 2.000
+  fitted int_Linf  order = 1.900  (dev 5.16e-02)  pairwise -, 1.774, 1.890, 1.946, 1.973
+
+=== bc=robin, closure=onesided ===
+  N=  16  L2=1.162333e-02  Linf=3.430494e-02  bnd=3.430494e-02  int=2.853561e-02  sres=6.62e-14
+  N=  32  L2=5.402120e-03  Linf=1.685070e-02  bnd=1.685070e-02  int=1.537104e-02  sres=2.64e-13
+  N=  64  L2=2.600549e-03  Linf=8.355042e-03  bnd=8.355042e-03  int=7.978164e-03  sres=5.77e-13
+  N= 128  L2=1.275502e-03  Linf=4.158720e-03  bnd=4.158720e-03  int=4.063618e-03  sres=1.41e-12
+  N= 256  L2=6.316076e-04  Linf=2.074504e-03  bnd=2.074504e-03  int=2.050631e-03  sres=9.59e-12
+  fitted L2        order = 1.049  (dev 2.34e-02)  pairwise -, 1.105, 1.055, 1.028, 1.014
+  fitted Linf      order = 1.011  (dev 5.73e-03)  pairwise -, 1.026, 1.012, 1.007, 1.003
+  fitted bnd_Linf  order = 1.011  (dev 5.73e-03)  pairwise -, 1.026, 1.012, 1.007, 1.003
+  fitted int_Linf  order = 0.952  (dev 2.42e-02)  pairwise -, 0.893, 0.946, 0.973, 0.987
+
+saved to figures/results.json
+figures written: ['fig03c_convergence.png', 'fig03_error_maps.png', 'results.json', 'run_log.txt']
+  neumann_onesided   N=  16  nnz=   1110  ||A-A^T||/||A||=1.601e-02  rowsum_int=5.1e+02  rowsum_all=5.1e+02  cond~8.15e+02
+  neumann_onesided   N=  32  nnz=   4774  ||A-A^T||/||A||=7.906e-03  rowsum_int=2.0e+03  rowsum_all=2.0e+03  cond~3.14e+03
+  neumann_onesided   N=  64  nnz=  19782  ||A-A^T||/||A||=3.929e-03  rowsum_int=8.2e+03  rowsum_all=8.2e+03  cond~1.23e+04
+  neumann_onesided   N= 128  nnz=  80518  ||A-A^T||/||A||=1.959e-03  rowsum_int=3.3e+04  rowsum_all=3.3e+04  cond~4.89e+04
+  -> cond(h) fitted order -1.97 (expect ~ -2)
+  neumann_ghost      N=  16  nnz=   1138  ||A-A^T||/||A||=1.602e-02  rowsum_int=5.1e+02  rowsum_all=5.1e+02  cond~1.87e+02
+  neumann_ghost      N=  32  nnz=   4834  ||A-A^T||/||A||=7.907e-03  rowsum_int=2.0e+03  rowsum_all=2.0e+03  cond~7.48e+02
+  neumann_ghost      N=  64  nnz=  19906  ||A-A^T||/||A||=3.930e-03  rowsum_int=8.2e+03  rowsum_all=8.2e+03  cond~2.99e+03
+  neumann_ghost      N= 128  nnz=  80770  ||A-A^T||/||A||=1.959e-03  rowsum_int=3.3e+04  rowsum_all=3.3e+04  cond~1.20e+04
+  -> cond(h) fitted order -2.00 (expect ~ -2)
+  robin_ghost        N=  16  nnz=   1138  ||A-A^T||/||A||=1.599e-02  rowsum_int=5.1e+02  rowsum_all=5.1e+02  cond~1.53e+02
+  robin_ghost        N=  32  nnz=   4834  ||A-A^T||/||A||=7.903e-03  rowsum_int=2.0e+03  rowsum_all=2.0e+03  cond~6.10e+02
+  robin_ghost        N=  64  nnz=  19906  ||A-A^T||/||A||=3.929e-03  rowsum_int=8.2e+03  rowsum_all=8.2e+03  cond~2.44e+03
+  robin_ghost        N= 128  nnz=  80770  ||A-A^T||/||A||=1.959e-03  rowsum_int=3.3e+04  rowsum_all=3.3e+04  cond~9.76e+03
+  -> cond(h) fitted order -2.00 (expect ~ -2)
+  pure_neumann_ghost N=  16  nnz=   1377  ||A-A^T||/||A||=5.882e-02  rowsum_int=0.0e+00  rowsum_all=0.0e+00  cond~1.24e+17
+  pure_neumann_ghost N=  32  nnz=   5313  ||A-A^T||/||A||=3.030e-02  rowsum_int=0.0e+00  rowsum_all=0.0e+00  cond~9.24e+16
+  pure_neumann_ghost N=  64  nnz=  20865  ||A-A^T||/||A||=1.538e-02  rowsum_int=0.0e+00  rowsum_all=0.0e+00  cond~2.20e+17
+  pure_neumann_ghost N= 128  nnz=  82689  ||A-A^T||/||A||=7.752e-03  rowsum_int=0.0e+00  rowsum_all=0.0e+00  cond~4.00e+17
+  -> cond(h) fitted order -0.63 (expect ~ -2)
+saved. figure: fig04_spy.png
+=== solver race, N=64, Neumann ghost, tol=1e-10 ===
+    splu           iters=      1  time=0.016s  rel_res=1.52e-15  |du|_inf=0.00e+00
+    jacobi         iters=  22388  time=1.979s  rel_res=1.00e-10  |du|_inf=2.53e-07
+    gauss_seidel   iters=  11192  time=4.646s  rel_res=9.99e-11  |du|_inf=2.52e-07
+    sor(1.5)       iters=   3721  time=1.664s  rel_res=9.96e-11  |du|_inf=2.50e-07
+    bicgstab+ILU   iters=     39  time=0.089s  rel_res=8.62e-11  |du|_inf=6.88e-09
+=== solver race, N=64, Neumann onesided (h^-1 rows stress) ===
+    splu           iters=      1  time=0.026s  rel_res=2.02e-15  |du|_inf=0.00e+00
+    jacobi         iters=  22578  time=2.575s  rel_res=9.99e-11  |du|_inf=2.39e-07
+    gauss_seidel   iters=  11277  time=4.551s  rel_res=9.99e-11  |du|_inf=2.42e-07
+    sor(1.5)       iters=   3749  time=1.651s  rel_res=9.96e-11  |du|_inf=2.40e-07
+    bicgstab+ILU   iters=     35  time=0.042s  rel_res=1.40e-10  |du|_inf=9.29e-08
+=== closure cost-accuracy (Neumann) ===
+    ghost     N=   16  bnd_Linf=8.6106e-04  t_solve=0.001s  nnz=1138
+    ghost     N=   32  bnd_Linf=2.1625e-04  t_solve=0.004s  nnz=4834
+    ghost     N=   64  bnd_Linf=5.4125e-05  t_solve=0.017s  nnz=19906
+    ghost     N=  128  bnd_Linf=1.3537e-05  t_solve=0.082s  nnz=80770
+    ghost     N=  256  bnd_Linf=3.3845e-06  t_solve=0.504s  nnz=325378
+    ghost     N=  512  bnd_Linf=8.4614e-07  t_solve=3.632s  nnz=1306114
+    -> fitted boundary order 2.000, N_needed: {'1e-02': 4.708987574684596, '1e-03': 14.891664966004754, '1e-04': 47.09328320421121, '1e-05': 148.9274253761998}
+    onesided  N=   16  bnd_Linf=5.8320e-02  t_solve=0.002s  nnz=1110
+    onesided  N=   32  bnd_Linf=2.8149e-02  t_solve=0.004s  nnz=4774
+    onesided  N=   64  bnd_Linf=1.3830e-02  t_solve=0.016s  nnz=19782
+    onesided  N=  128  bnd_Linf=6.8529e-03  t_solve=0.090s  nnz=80518
+    onesided  N=  256  bnd_Linf=3.4109e-03  t_solve=0.586s  nnz=324870
+    onesided  N=  512  bnd_Linf=1.7016e-03  t_solve=3.271s  nnz=1305094
+    -> fitted boundary order 1.005, N_needed: {'1e-02': 87.87925862944516, '1e-03': 868.9535639912716, '1e-04': 8592.24700059239, '1e-05': 84960.47611576454}
+saved. figure: fig05_cost_accuracy.png
+=== null space & compatibility, N=32 ===
+N=32  n_unknown=1089
+  ||A @ 1||_inf               = 0.000e+00   (expect 0)
+  ||A^T w||_inf (w=left null)  = 2.572e-12
+  smallest 3 singular values  = [9.654404891017512, 9.654404891016853, 2.2599166956350334e-11]
+  compatibility |<b,w>|/(|b||w|) = 5.764e-06  (expect ~0)
+  pinned-row defect ||Au-b||_inf = 1.968e+00
+  raw Linf (before shift)        = 1.0026e+00
+  after mean-shift: Linf=1.7182e-03  L2=3.3814e-04
+  FALSIFICATION incompatible b: pinned-row defect = 4.094e+03 (vs 1.968e+00)
+
+=== convergence with pinned gauge + mean shift ===
+  N=  16  L2=1.4524e-03  Linf=6.0253e-03
+  N=  32  L2=3.3814e-04  Linf=1.7182e-03
+  N=  64  L2=8.1439e-05  Linf=4.8258e-04
+  N= 128  L2=1.9977e-05  Linf=1.3390e-04
+  N= 256  L2=4.9468e-06  Linf=3.6788e-05
+  fitted: L2 order 2.048, Linf order 1.839
+saved to figures/results.json
+baseline (ghost, correct): L2 order 2.052, Linf order 1.997
+F1_flip_q_sign            : L2 order 0.038, Linf order -0.002, Linf(N=128) = 3.477e+00
+F2_forget_double_west     : L2 order -0.076, Linf order -0.175, Linf(N=128) = 6.321e+00
+F3_drop_top_dirichlet     : L2 order 0.040, Linf order 0.000, Linf(N=128) = 7.389e+00
+saved to figures/results.json
+discretisation error (LU, N=64): Linf = 5.412e-05
+tol=1e-02  achieved=7.56e-03  iters=  13  disc_Linf=7.372e-01  vs_LU=7.372e-01  scaled_resid=1.44e-02
+tol=1e-04  achieved=1.10e-04  iters=  21  disc_Linf=8.261e-03  vs_LU=8.262e-03  scaled_resid=2.10e-04
+tol=1e-06  achieved=2.81e-06  iters=  30  disc_Linf=6.814e-05  vs_LU=6.960e-05  scaled_resid=5.34e-06
+tol=1e-08  achieved=2.99e-09  iters=  35  disc_Linf=5.412e-05  vs_LU=1.246e-08  scaled_resid=5.68e-09
+tol=1e-10  achieved=8.62e-11  iters=  39  disc_Linf=5.413e-05  vs_LU=6.879e-09  scaled_resid=1.64e-10
+tol=1e-12  achieved=9.22e-13  iters=  43  disc_Linf=5.412e-05  vs_LU=9.220e-11  scaled_resid=1.75e-12
+disc_Linf change tol 1e-2 -> 1e-12: 7.372e-01 -> 5.412e-05 (ratio 13620.4)
+fitted ghost order at tol=1e-6:  L2 0.972, Linf 1.144
+fitted ghost order at tol=1e-10: L2 2.052, Linf 1.997
+saved to figures/results.json
+== analytic data self-checks ==
+  forcing FD rel err   : 2.083e-06
+  robin data residual  : 0.000e+00
+
+== pure-Neumann null vector ==
+  ||A @ 1||_inf = 0.000e+00  (expect 0)
+
+== hand-row defects (N=64, y=0.5) ==
+  neumann onesided : {'lhs_minus_data': np.float64(-0.03483154559194279), 'expected_order': 1}
+  neumann ghost    : {'lhs_minus_rhs': np.float64(0.02316005362672513), 'centred_bc_defect': np.float64(0.0001823626211878704), 'expected_order': 2}
+  robin   onesided : {'lhs_minus_data': np.float64(-0.03483154559194368), 'expected_order': 1}
+  robin   ghost    : {'lhs_minus_rhs': np.float64(0.02316005362672513), 'centred_bc_defect': np.float64(0.0001823626211869822), 'expected_order': 2}
+
+== global convergence (ghost, neumann) -- expect ~2 ==
+  N=  16  L2=2.4976e-04  Linf=8.6106e-04  bnd=8.6106e-04  scaled_res=1.55e-15
+  N=  32  L2=5.8824e-05  Linf=2.1625e-04  bnd=2.1625e-04  scaled_res=2.00e-15
+  N=  64  L2=1.4227e-05  Linf=5.4125e-05  bnd=5.4125e-05  scaled_res=2.89e-15
+  N= 128  L2=3.4955e-06  Linf=1.3537e-05  bnd=1.3537e-05  scaled_res=4.00e-15
+
+== global convergence (onesided, neumann) -- expect ~1 ==
+  N=  16  L2=1.9578e-02  Linf=5.8320e-02  bnd=5.8320e-02
+  N=  32  L2=8.9385e-03  Linf=2.8149e-02  bnd=2.8149e-02
+  N=  64  L2=4.2663e-03  Linf=1.3830e-02  bnd=1.3830e-02
+  N= 128  L2=2.0837e-03  Linf=6.8529e-03  bnd=6.8529e-03
+  fitted Linf order (onesided) = 1.029
+
+== robin ghost -- expect ~2 ==
+  N=  16  L2=1.4669e-04  Linf=5.3073e-04  bnd=5.3073e-04
+  N=  32  L2=3.4188e-05  Linf=1.3320e-04  bnd=1.3320e-04
+  N=  64  L2=8.2209e-06  Linf=3.3351e-05  bnd=3.3351e-05
+  N= 128  L2=2.0138e-06  Linf=8.3397e-06  bnd=8.3397e-06
+  fitted L2 order (robin ghost) = 2.062
+
+########## exp01_row_verification.py ##########
+
+########## exp02_convergence_tables.py ##########
+
+########## exp03_error_maps.py ##########
+
+########## exp04_matrix_structure.py ##########
+
+########## exp05_solvers_cost.py ##########
+
+########## exp06_pure_neumann.py ##########
+
+########## exp07_falsification.py ##########
+
+########## exp08_tolerance_sweep.py ##########
+
+########## tests/test_smoke.py ##########
+
+All experiments completed. Figures in figures/, numbers in figures/results.json
